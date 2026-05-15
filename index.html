@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هدية لروح 🎁 — دليل المذاكرة الذكية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0D0D1A;
+    --surface: #13132A;
+    --card: #1A1A35;
+    --border: #2A2A50;
+    --gold: #D4AF37;
+    --gold-light: #F0D060;
+    --lavender: #9B7FD4;
+    --pink: #E879A0;
+    --cyan: #5DD8D8;
+    --text: #E8E8F5;
+    --text-muted: #8888AA;
+    --glow-gold: 0 0 20px rgba(212,175,55,0.4);
+    --glow-purple: 0 0 20px rgba(155,127,212,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Stars background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 90%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 45% 55%, rgba(212,175,55,0.2) 0%, transparent 100%),
+      radial-gradient(2px 2px at 65% 35%, rgba(155,127,212,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+  }
+
+  .gift-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+    color: #0D0D1A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    box-shadow: var(--glow-gold);
+    animation: pulse-badge 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 15px rgba(212,175,55,0.4); }
+    50% { box-shadow: 0 0 30px rgba(212,175,55,0.7), 0 0 60px rgba(212,175,55,0.2); }
+  }
+
+  .hero-emoji {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 16px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero-title {
+    font-size: 42px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--lavender));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 8px;
+  }
+
+  .hero-name {
+    font-size: 22px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-top: 8px;
+  }
+
+  .divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 30px auto;
+  }
+
+  /* ---- SECTIONS ---- */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .icon-gold { background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.3); }
+  .icon-purple { background: rgba(155,127,212,0.15); border: 1px solid rgba(155,127,212,0.3); }
+  .icon-pink { background: rgba(232,121,160,0.15); border: 1px solid rgba(232,121,160,0.3); }
+  .icon-cyan { background: rgba(93,216,216,0.15); border: 1px solid rgba(93,216,216,0.3); }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .section-title span {
+    color: var(--gold);
+  }
+
+  /* ---- CARDS ---- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+  }
+  .card.gold::before { background: var(--gold); }
+  .card.purple::before { background: var(--lavender); }
+  .card.pink::before { background: var(--pink); }
+  .card.cyan::before { background: var(--cyan); }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .card-text strong {
+    color: var(--text);
+  }
+
+  /* ---- STEPS ---- */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .step:hover { transform: translateX(-4px); }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: #0D0D1A;
+    font-weight: 900;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--glow-gold);
+  }
+
+  .step-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--gold-light);
+  }
+
+  .step-content p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* ---- PROMPT BOX ---- */
+  .prompt-container {
+    background: #0A0A18;
+    border: 1px solid rgba(155,127,212,0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(155,127,212,0.15);
+  }
+
+  .prompt-header {
+    background: rgba(155,127,212,0.1);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(155,127,212,0.2);
+  }
+
+  .prompt-header span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--lavender);
+    text-transform: uppercase;
+  }
+
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background: #FF5F57; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #28CA41; }
+
+  .prompt-body {
+    padding: 24px;
+    font-family: 'Courier New', monospace;
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: #B8B8D0;
+    white-space: pre-wrap;
+    max-height: 500px;
+    overflow-y: auto;
+    direction: rtl;
+  }
+
+  .prompt-body::-webkit-scrollbar { width: 6px; }
+  .prompt-body::-webkit-scrollbar-track { background: transparent; }
+  .prompt-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  .highlight-gold { color: var(--gold-light); font-weight: bold; }
+  .highlight-purple { color: #C4A0F8; }
+  .highlight-cyan { color: var(--cyan); }
+
+  /* ---- TIPS GRID ---- */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .tips-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 28px; }
+  }
+
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+
+  .tip-icon { font-size: 32px; margin-bottom: 10px; display: block; }
+  .tip-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--gold); }
+  .tip-text { font-size: 12px; line-height: 1.6; color: var(--text-muted); }
+
+  /* ---- GAME SYSTEM ---- */
+  .game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .game-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 400px) {
+    .game-grid { grid-template-columns: 1fr; }
+  }
+
+  .game-card {
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: transform 0.2s;
+  }
+
+  .game-card:hover { transform: scale(1.03); }
+
+  .game-card.boss { background: rgba(232,121,160,0.1); border-color: rgba(232,121,160,0.3); }
+  .game-card.easy { background: rgba(93,216,216,0.1); border-color: rgba(93,216,216,0.3); }
+  .game-card.combo { background: rgba(155,127,212,0.1); border-color: rgba(155,127,212,0.3); }
+  .game-card.trap { background: rgba(255,100,100,0.1); border-color: rgba(255,100,100,0.3); }
+  .game-card.memo { background: rgba(212,175,55,0.1); border-color: rgba(212,175,55,0.3); }
+  .game-card.under { background: rgba(100,200,100,0.1); border-color: rgba(100,200,100,0.3); }
+
+  .game-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+  .game-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .game-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+  .boss .game-label { color: var(--pink); }
+  .easy .game-label { color: var(--cyan); }
+  .combo .game-label { color: var(--lavender); }
+  .trap .game-label { color: #FF8080; }
+  .memo .game-label { color: var(--gold); }
+  .under .game-label { color: #80D080; }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    text-align: center;
+    padding: 50px 20px 40px;
+    position: relative;
+  }
+
+  .footer-heart {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 16px;
+    animation: beat 1.5s ease-in-out infinite;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  .footer-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .footer-text strong {
+    color: var(--gold);
+  }
+
+  /* ---- NOTEBOOKLM VISUAL ---- */
+  .nlm-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 650px) {
+    .nlm-steps { grid-template-columns: 1fr 1fr; }
+  }
+
+  .nlm-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .nlm-step-arrow {
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 16px;
+    display: none;
+  }
+
+  @media (min-width: 650px) {
+    .nlm-step-arrow { display: block; }
+  }
+
+  .nlm-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: #0D0D1A;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+  }
+
+  .nlm-step-icon { font-size: 24px; margin-bottom: 6px; display: block; }
+  .nlm-step-title { font-size: 11px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+  .nlm-step-desc { font-size: 10px; color: var(--text-muted); line-height: 1.5; }
+
+  /* Scroll reveal animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+
+  /* Copy button */
+  .copy-btn {
+    background: rgba(155,127,212,0.2);
+    border: 1px solid rgba(155,127,212,0.4);
+    color: var(--lavender);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+  }
+
+  .copy-btn:hover {
+    background: rgba(155,127,212,0.35);
+    box-shadow: 0 0 12px rgba(155,127,212,0.3);
+  }
+
+  .copy-btn.copied {
+    background: rgba(93,216,216,0.2);
+    border-color: rgba(93,216,216,0.4);
+    color: var(--cyan);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero fade-in">
+    <div class="gift-badge">🎁 هدية خاصة</div>
+    <span class="hero-emoji">🧠</span>
+    <h1 class="hero-title">دليل المذاكرة الذكية</h1>
+    <p class="hero-subtitle">
+      طريقة مذاكرة مش بس سهلة — دي طريقة مذاكرة زي ما بتفكر الدكتور نفسه
+    </p>
+    <p class="hero-name">إهداء إلى روح 💛</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WHAT IS NOTEBOOKLM -->
+  <div class="section fade-in delay-1">
+    <div class="section-header">
+      <div class="section-icon icon-gold">📚</div>
+      <div>
+        <div class="section-title">إيه هو <span>NotebookLM</span>؟</div>
+      </div>
+    </div>
+
+    <div class="card gold">
+      <p class="card-text">
+        <strong>NotebookLM</strong> هو أداة مجانية من Google بتخليك ترفع أي ملف — PDF، Word، حتى YouTube أو موقع ويب — وبعدين تتكلم مع محتواه زي ما بتكلم حد بيفهمه.
+        <br><br>
+        الفرق بينه وبين ChatGPT العادي إنه <strong>بيتعلم من ملفاتك أنت</strong> مش من الإنترنت. يعني لو رفعت ملاحظات الدكتور — هيرد بناءً عليها هو بالضبط.
+        <br><br>
+        🎯 النتيجة: <strong>مذاكرة ذكية بدل مذاكرة عشوائية.</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="section fade-in delay-2">
+    <div class="section-header">
+      <div class="section-icon icon-cyan">🚀</div>
+      <div>
+        <div class="section-title">خطوات الاستخدام <span>خطوة بخطوة</span></div>
+      </div>
+    </div>
+
+    <div class="nlm-steps">
+      <div class="nlm-step">
+        <div class="nlm-num">1</div>
+        <span class="nlm-step-icon">🌐</span>
+        <div class="nlm-step-title">افتح الموقع</div>
+        <div class="nlm-step-desc">notebooklm.google.com<br>اعملي sign in بـ Google</div>
+      </div>
+      <div class="nlm-step">
+        <div class="nlm-step-arrow">◀</div>
+        <div class="nlm-num">2</div>
+        <span class="nlm-step-icon">📁</span>
+        <div class="nlm-step-title">ارفعي الملفات</div>
+        <div class="nlm-step-desc">ارفعي PDF أو Word بتاع المنهج كله</div>
+      </div>
+      <div class="nlm-step">
+        <div class="nlm-step-arrow">◀</div>
+        <div class="nlm-num">3</div>
+        <span class="nlm-step-icon">📋</span>
+        <div class="nlm-step-title">انسخي البرومت</div>
+        <div class="nlm-step-desc">انسخي البرومت الموجود في الصفحة دي والزقيه في الشات</div>
+      </div>
+      <div class="nlm-step">
+        <div class="nlm-step-arrow">◀</div>
+        <div class="nlm-num">4</div>
+        <span class="nlm-step-icon">✨</span>
+        <div class="nlm-step-title">استقبلي التحليل</div>
+        <div class="nlm-step-desc">هيعطيك تحليل كامل للمنهج وأهم أسئلة الامتحان</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="section fade-in delay-3">
+    <div class="section-header">
+      <div class="section-icon icon-purple">💡</div>
+      <div>
+        <div class="section-title">نصايح <span>تخلي النتيجة أحسن</span></div>
+      </div>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-icon">📄</span>
+        <div class="tip-title">ارفعي ملفاتك بدقة</div>
+        <div class="tip-text">لو عندك كتاب PDF + ملاحظاتك الشخصية — ارفعيهم الاتنين مع بعض. NotebookLM هيفهم الدنيا أكتر</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🎙️</span>
+        <div class="tip-title">جربي Audio Overview</div>
+        <div class="tip-text">فيه زرار بيحول ملفاتك لـ podcast بالإنجليزي — مفيد جداً وانتي بتتحركي أو بتذاكري</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">❓</span>
+        <div class="tip-title">اسألي بعد البرومت</div>
+        <div class="tip-text">بعد ما يعطيك التحليل، اسأليه مثلاً "اعملي امتحان تجريبي على الباب ده"</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🗂️</span>
+        <div class="tip-title">نوتبوك لكل مادة</div>
+        <div class="tip-text">اعملي نوتبوك منفصلة لكل مادة عشان محتوى كل مادة يفضل منظم لوحده</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME SYSTEM -->
+  <div class="section fade-in delay-4">
+    <div class="section-header">
+      <div class="section-icon icon-pink">🎮</div>
+      <div>
+        <div class="section-title">نظام اللعب — <span>عشان تعرفي تقري التحليل</span></div>
+      </div>
+    </div>
+
+    <div class="card purple" style="margin-bottom:16px;">
+      <p class="card-text">
+        البرومت هيحول المنهج لـ <strong>Game System</strong> — هتلاقي كل نقطة في المنهج مصنفة زي كده:
+      </p>
+    </div>
+
+    <div class="game-grid">
+      <div class="game-card boss">
+        <span class="game-icon">👾</span>
+        <div class="game-label">Boss Questions</div>
+        <div class="game-desc">أصعب أسئلة — تستاهل وقت تاني</div>
+      </div>
+      <div class="game-card easy">
+        <span class="game-icon">⭐</span>
+        <div class="game-label">Easy XP</div>
+        <div class="game-desc">أسئلة سهلة — اكسبي منها نقاط مضمونة</div>
+      </div>
+      <div class="game-card combo">
+        <span class="game-icon">🔗</span>
+        <div class="game-label">Combo Ideas</div>
+        <div class="game-desc">أفكار مترابطة — فاهمة واحدة = فاهمة الاتنين</div>
+      </div>
+      <div class="game-card trap">
+        <span class="game-icon">⚠️</span>
+        <div class="game-label">Trap Zones</div>
+        <div class="game-desc">فخاخ الدكتور — انتبهي منها كويس</div>
+      </div>
+      <div class="game-card memo">
+        <span class="game-icon">📌</span>
+        <div class="game-label">Must Memorize</div>
+        <div class="game-desc">حفظ إجباري — مفيش كلام تاني</div>
+      </div>
+      <div class="game-card under">
+        <span class="game-icon">🧩</span>
+        <div class="game-label">Must Understand</div>
+        <div class="game-desc">فهم إجباري — الحفظ وحده مش كفاية</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE PROMPT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-purple">✨</div>
+      <div>
+        <div class="section-title">البرومت السحري — <span>انسخيه والزقيه في NotebookLM</span></div>
+      </div>
+    </div>
+
+    <div class="prompt-container">
+      <div class="prompt-header">
+        <div class="dots">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+        </div>
+        <span>🪄 الـ Prompt</span>
+        <button class="copy-btn" onclick="copyPrompt(this)" id="copyBtn">نسخ الكل</button>
+      </div>
+      <div class="prompt-body" id="promptText">أنت الآن خبير تحليل مناهج وواضع امتحانات محترف، ومهمتك ليست التلخيص فقط، بل فهم "طريقة لعب الدكتور" وتحليل طريقة تفكير واضع الامتحان.
+
+حلل هذا الكتاب/المنهج كأنك:
+• دكتور جامعي يعرف من أين تأتي الأسئلة
+• واضع امتحانات محترف
+• مدرس فاهم الترابط بين الأفكار
+• مدرب استراتيجيات مذاكرة ذكية
+
+المطلوب منك:
+
+1️⃣ استخراج الأفكار المحورية
+حدد أهم الأفكار الأساسية التي يبنى عليها باقي المنهج.
+
+2️⃣ كشف الأجزاء عالية الاحتمالية في الامتحان
+حدد:
+• الأجزاء التي تتكرر فكرتها
+• النقاط التي تحتوي تفاصيل مهمة
+• المناطق التي يحب واضع الامتحان السؤال منها
+• الأجزاء التي يمكن تحويلها إلى MCQ أو صح/غلط أو مقالي أو حالات تطبيقية
+
+3️⃣ تحليل "طريقة لعب الدكتور"
+استنتج:
+• هل يعتمد على الفهم أم الحفظ؟
+• هل يحب الربط بين الدروس؟
+• هل يركز على الاستثناءات؟
+• هل يكرر نفس النمط؟
+• ما نوع الفخاخ المتوقعة؟
+
+4️⃣ ربط أجزاء المنهج ببعض
+أنشئ خريطة توضح:
+• كل درس مرتبط بأي درس
+• ما الأفكار المشتركة
+• ما المفاهيم التي تعتبر أساس لباقي الأبواب
+• كيف يمكن أن يأتي سؤال يربط أكثر من فصل
+
+5️⃣ استخراج الأفكار الخفية
+حدد:
+• النقاط التي تبدو بسيطة لكن تحمل سؤال قوي
+• الجمل التي قد يبني عليها الدكتور سؤال tricky
+• التعريفات المهمة
+• المقارنات
+• الأسباب والنتائج
+
+6️⃣ تحويل المنهج إلى نظام لعب (Game System)
+حوّل المنهج إلى:
+🔴 Boss Questions → أصعب الأفكار
+🟢 Easy XP → الأسئلة السهلة
+🔵 Combo Ideas → الأفكار المرتبطة
+🟡 Trap Zones → الفخاخ
+📌 Must Memorize → الحفظ الإجباري
+🧩 Must Understand → الفهم الإجباري
+
+7️⃣ توقعات الامتحان
+في النهاية:
+• توقع أكثر 20 فكرة مرشحة للامتحان
+• اشرح لماذا تتوقعها
+• أعط أمثلة على شكل السؤال المتوقع
+
+طريقة الرد:
+• استخدم جداول منظمة
+• استخدم خرائط وربط بصري بين الأفكار
+• لا تكتفي بالتلخيص
+• فكر كأنك واضع الامتحان نفسه
+• اشرح "لماذا هذه النقطة مهمة"</div>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-heart">💛</span>
+    <p class="footer-text">
+      هدية صغيرة من قلب كبير<br>
+      عشان <strong>روح</strong> تذاكر بذكاء وتعدي امتحاناتها بتفوق 🌟
+      <br><br>
+      <span style="font-size:13px; color: var(--text-muted);">دليل مذاكرة · قسم الحضارة الأوروبية · NotebookLM Guide</span>
+    </p>
+  </div>
+
+</div>
+
+<script>
+function copyPrompt(btn) {
+  const text = document.getElementById('promptText').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ تم النسخ!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'نسخ الكل';
+      btn.classList.remove('copied');
+    }, 2500);
+  }).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = '✓ تم النسخ!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'نسخ الكل';
+      btn.classList.remove('copied');
+    }, 2500);
+  });
+}
+</script>
+
+</body>
+</html>
